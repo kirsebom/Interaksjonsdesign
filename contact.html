@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="fontawesome/all.css" rel="stylesheet">
+    <title>Contact us</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            Meny<i class="fas fa-bars"></i>
+        </label>
+        <a class="logo" href="index.html">Letha</a>
+        <ul>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="gifts.html">The Perfect Gift</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="backgroundImgContact">
+        <div class="searchBox">
+            <div class="search-input">
+                <input type="text" class="textArea" placeholder="Write your search here">
+                <input type="submit" class="submit" value="Search">
+            </div>
+        </div>
+        <div class="contact-form">
+            <form class="form-contact">
+                <h1>Contact Us</h1>
+                <div class="input-container">
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" class="input">
+                    <div class="form-error" id="name-error">
+                        Please enter your name
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" id="email" class="input">
+                    <div class="form-error" id="email-error">
+                        Please enter a valid email adress
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="subject" class="label">Your message must be atleast 20 characters</label>
+                    <textarea name="subject" class="text-box" id="subject" placeholder="Write your message here"></textarea>
+                    <div class="form-error" id="subject-error">Make sure your message is longer than 20 characters</div>
+                </div>
+                <div class="submit-container">
+                    <button class="submit-btn">Send Message</button>
+                    <div class="submit-background"></div>
+                </div>
+            </form>
+        </div>
+        <footer class="footerContact">
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        </footer>
+    </div>
+    <script src="javascript/form.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

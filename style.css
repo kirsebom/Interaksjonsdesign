@@ -1,0 +1,590 @@
+* {
+	box-sizing: border-box;
+	margin: 0 0;
+	padding: 0 0;
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: livvic;
+	src: url("/fonts/Livvic/Livvic-Regular.ttf");
+}
+
+@font-face {
+	font-family: livvicBold;
+	src: url("/fonts/Livvic/Livvic-Bold.ttf");
+}
+
+@font-face {
+	font-family: livvicBoldItalic;
+	src: url("/fonts/Livvic/Livvic-BoldItalic.ttf");
+}
+
+@font-face {
+	font-family: livvicMedium;
+	src: url("fonts/Livvic/Livvic-Medium.ttf");
+}
+
+body {
+	font-family: livvicMedium;
+	background: #f2f2f2;
+	height: 100%;
+}
+
+/*NAVBAR*/
+
+nav {
+	background-color: #d4d4d4;
+	border-bottom: solid 2px;
+	width: 100%;
+	height: 80px;
+}
+
+.logo {
+	float: left;
+	margin-left: 50px;
+	margin-top: 10px;
+	color: white;
+	font-family: livvicBold;
+	font-size: 46px;
+}
+span {
+	transition: all 3s ease;
+}
+span.text-animation {
+	color: black;
+}
+
+nav ul {
+	float: right;
+	margin-right: 50px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a {
+	font-family: livvicBoldItalic, sans-serif;
+	color: black;
+	background: #bc8282;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	margin-left: 40px;
+	border: 1px solid black;
+	box-shadow: 1px 2px black;
+}
+
+a.active,
+li a:hover {
+	border: 1px solid black;
+	transition: 0.5s;
+	color: black;
+	box-shadow: 5px 10px black;
+}
+
+/*Menu icon*/
+
+#check {
+	display: none;
+}
+
+.checkbtn {
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	margin-top: 30px;
+	text-transform: uppercase;
+	display: none;
+}
+
+/*BackgroundIMG*/
+
+.backgroundImg {
+	background-image: url("/images/pexels-ekrulila-3084342v2.jpg");
+	min-height: 900px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.backgroundImgShoes {
+	background-image: url("/images/ShoesSite.jpg");
+	height: 1300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.backgroundImgGift {
+	background-image: url("images/presents.jpg");
+	height: 1200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.backgroundImgSale {
+	background-image: url("images/salev2.jpg");
+	height: 1200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.backgroundImgContact {
+	background-image: url("images/adam-solomon-WHUDOzd5IYU-unsplashv2.jpg");
+	height: 1000px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*contact page*/
+
+.form-error {
+	display: none;
+	color: red;
+	font-size: 0.8rem;
+	margin-top: 0.3rem;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+	animation: 1s ease-in form-glide forwards;
+	position: relative;
+}
+@keyframes form-glide {
+	0% {
+		top: -1000px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+form {
+	max-width: 500px;
+	padding: 50px;
+	background: rgba(255, 255, 255, 0.808);
+	box-shadow: 5px 1px 5px 5px white;
+}
+.input-container {
+	position: relative;
+}
+.label {
+	display: block;
+	margin-top: 1.4rem;
+	width: 100%;
+	font-size: 16px;
+}
+.input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	background: white;
+}
+.text-box {
+	width: 100%;
+	height: 200px;
+	resize: none;
+	background: white;
+	border: 1px solid black;
+}
+.submit-container {
+	overflow: hidden;
+	position: relative;
+	max-width: 200px;
+	border-radius: 20px;
+}
+.submit-btn {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	color: black;
+	background: none;
+	border: 0px;
+	font-family: LivvicBoldItalic;
+	padding: 10px;
+}
+.submit-background {
+	background: rgb(146, 58, 180);
+	background: linear-gradient(
+		90deg,
+		rgba(146, 58, 180, 1) 0%,
+		rgba(253, 43, 29, 1) 50%,
+		rgba(252, 176, 69, 1) 100%
+	);
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: 0px;
+	animation: changeColor 4s linear alternate infinite;
+}
+@keyframes changeColor {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	100% {
+		top: -200px;
+		left: -200px;
+	}
+}
+.submit-btn:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*Shoes site and gift site*/
+.stock {
+	opacity: 0;
+}
+.show-stock {
+	opacity: 1;
+	transition: 1s ease;
+}
+.giftBaskets {
+	transform: translateX(-1800px);
+}
+.giftbaskets-appear {
+	transform: translateX(0px);
+	transition: 1s ease;
+}
+.sale {
+	transform: translateY(-1500px);
+}
+.show-sale {
+	transform: translateY(0px);
+	transition: 1s ease;
+}
+.button-container {
+	opacity: 0;
+}
+.show-button-container {
+	opacity: 1;
+	transition: 1s ease;
+}
+.stock,
+.giftBaskets,
+.sale {
+	width: 70%;
+	margin: 200px auto;
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	border-radius: 20px;
+}
+.shoe,
+.gift,
+.sale-items {
+	display: flex;
+	flex-direction: row;
+	padding: 50px 50px;
+	background: hsla(0, 0%, 83%, 0.603);
+	margin: 10px 10px;
+	border-radius: 5px;
+}
+.inline-flex,
+.gift-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-left: 20px;
+}
+
+.inline-flex a,
+.gift-flex a {
+	color: black;
+	font-size: 1.3rem;
+}
+.inline-flex a:hover,
+.gift-flex a:hover {
+	font-size: 1.5rem;
+	transition: 0.3s;
+	text-decoration: underline;
+}
+
+.footerShoes,
+.footerSale {
+	font-size: 50px;
+	color: white;
+	bottom: 0px;
+	position: relative;
+}
+.footerGifts {
+	font-size: 50px;
+	color: white;
+	bottom: 0px;
+	position: relative;
+}
+
+/* Search box*/
+
+.searchBox {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+}
+.search-input {
+	background: #f8e0e0;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+}
+.textArea {
+	height: 30px;
+	margin-top: 25px;
+	font-family: livvicMedium;
+}
+.submit {
+	width: 100px;
+	height: 30px;
+	margin-left: 30px;
+	background: #07aa48;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin-top: 25px;
+	box-shadow: 2px 4px black;
+	font-family: livvicBoldItalic;
+}
+.submit:hover {
+	box-shadow: 4px 8px black;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+/* info main page*/
+.info {
+	margin-top: 200px;
+	height: 200px;
+	width: 100%;
+	backdrop-filter: blur(5px);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+
+.info h2 p {
+	margin-bottom: 10px;
+}
+/*Button homepage*/
+.button-container {
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	height: 100px;
+	border-radius: 40px;
+	margin: 0 auto;
+}
+.button-container button {
+	width: 100%;
+	height: 100%;
+	border: none;
+	position: relative;
+	z-index: 100;
+	background: none;
+	color: #fff;
+	border-radius: 40px;
+	font-size: 32px;
+	font-family: LivvicBoldItalic;
+	text-transform: uppercase;
+}
+.button-container button:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.button-background {
+	background: rgb(146, 58, 180);
+	background: linear-gradient(
+		90deg,
+		rgba(146, 58, 180, 1) 0%,
+		rgba(253, 43, 29, 1) 50%,
+		rgba(252, 176, 69, 1) 100%
+	);
+	height: 800px;
+	width: 800px;
+	position: absolute;
+	top: 0px;
+	animation: moveBackground 4s linear alternate infinite;
+}
+@keyframes moveBackground {
+	0% {
+		top: 0px;
+		left: 0px;
+	}
+	100% {
+		left: -400px;
+		top: -400px;
+	}
+}
+
+/*Footer*/
+footer {
+	font-size: 50px;
+	color: white;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	display: flex;
+	justify-content: center;
+}
+footer i {
+	padding: 0 50px;
+}
+
+footer a {
+	color: white;
+}
+.instagram:hover {
+	color: #e4405f;
+	transition: 0.5s ease;
+}
+.facebook:hover {
+	color: #3b5999;
+	transition: 0.5s ease;
+}
+.twitter:hover {
+	color: #55acee;
+	transition: 0.5s ease;
+}
+/*Media query*/
+
+@media (max-width: 1609px) {
+	.backgroundImgGift {
+		height: 1300px;
+	}
+}
+
+@media (max-width: 1308px) {
+	.info {
+		font-size: 1.5rem;
+	}
+
+	.backgroundImgShoes {
+		height: 1900px;
+	}
+}
+
+@media (max-width: 1083px) {
+	.backgroundImgSale {
+		height: 1400px;
+	}
+}
+
+@media (max-width: 1073px) {
+	.backgroundImgGift {
+		height: 1600px;
+	}
+
+	.backgroundImgContact {
+		background-image: url("images/contactSmallerV2.jpg");
+		height: 1000px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@media (max-width: 930px) {
+	.info {
+		font-size: 1rem;
+	}
+
+	.checkbtn {
+		display: block;
+	}
+	ul {
+		position: absolute;
+		width: 100%;
+		height: 400px;
+		top: 161px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+		z-index: 1;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+
+	nav ul li {
+		display: block;
+		border: 1px solid grey;
+		backdrop-filter: blur(5px);
+	}
+
+	.backgroundImgSale {
+		background-image: url("images/Sale90degVsmallerV2.jpg");
+		height: 1600px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 630px) {
+	.info {
+		width: 80%;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 150px auto;
+		border: 1px solid #d4d4d4;
+		border-radius: 10px;
+		padding: 0 10px;
+	}
+	.info h2 {
+		margin-bottom: 20px;
+	}
+	.button-container {
+		width: 250px;
+		height: 75px;
+	}
+}
+
+@media (max-width: 472px) {
+	.backgroundImgShoes {
+		height: 2100px;
+	}
+	.sale {
+		width: 80%;
+	}
+}
+
+@media (max-width: 440px) {
+	footer i,
+	.footerGifts {
+		padding: 0 30px;
+		font-size: 2rem;
+	}
+	.backgroundImgGift {
+		height: 1700px;
+	}
+}
+
+@media (max-width: 400px) {
+	.logo {
+		margin-left: 10px;
+	}
+	.backgroundImgSale {
+		height: 1800px;
+	}
+}
+
+@media (max-width: 310px) {
+	footer i {
+		padding: 0 20px;
+		font-size: 2rem;
+	}
+}
